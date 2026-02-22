@@ -13,7 +13,6 @@ package-lock.json
 # generated output — users create their own via `npx codebrief`
 CONTEXT.md
 .cursor/
-.github/
 
 # internal docs — not needed in the repo
 ROADMAP.md
