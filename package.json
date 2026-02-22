@@ -1,0 +1,39 @@
+{
+  "name": "codebrief",
+  "version": "1.1.11",
+  "description": "Generate AI context files for your project in seconds — supports 10 languages, 50+ frameworks, Cursor rules & Copilot instructions",
+  "main": "src/index.js",
+  "bin": {
+    "codebrief": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "ai",
+    "cursor",
+    "copilot",
+    "context",
+    "developer-tools",
+    "cli",
+    "code-analysis",
+    "project-context",
+    "llm",
+    "openai",
+    "anthropic",
+    "groq",
+    "gemini",
+    "ollama"
+  ],
+  "author": "Murat Hüdavendigâr Öncü",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/murathudavendigar/codebrief"
+  },
+  "homepage": "https://www.npmjs.com/package/codebrief",
+  "files": [
+    "src/"
+  ]
+}

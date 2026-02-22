@@ -1,0 +1,23 @@
+node_modules/
+package-lock.json
+
+# env files — never commit API keys
+.env
+.env.local
+.env.*
+.codebrief
+
+# build/test artifacts
+*.tgz
+
+# generated output — users create their own via `npx codebrief`
+CONTEXT.md
+.cursor/
+.github/
+
+# internal docs — not needed in the repo
+ROADMAP.md
+
+# OS junk
+.DS_Store
+
