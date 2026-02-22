@@ -24,6 +24,7 @@ Add a single flag to have an AI model read your actual source files and rewrite 
 ## Requirements
 
 - **Node.js 16+** — that's it. Zero npm dependencies.
+- Works on **macOS**, **Linux**, and **Windows**.
 
 ---
 
@@ -79,14 +80,64 @@ The `--ai` flag makes codebrief read your actual source files and use an AI mode
 
 1. Go to [console.groq.com](https://console.groq.com) and create a free account (no credit card)
 2. Create an API key
-3. Set it in your terminal:
+3. Set it:
+
+**Option A — `.env.local` file (recommended, works on all OS)**
+
+Create a `.env.local` file in your project root:
+
+```
+GROQ_API_KEY=gsk_xxxxxxxxxxxx
+```
+
+codebrief auto-loads this file. No terminal config needed.
+
+**Option B — Global `~/.codebrief` file (works across all projects)**
+
+Create a file at `~/.codebrief` (macOS/Linux: `~/.codebrief`, Windows: `C:\Users\<you>\.codebrief`):
+
+```
+GROQ_API_KEY=gsk_xxxxxxxxxxxx
+```
+
+**Option C — Environment variable**
+
+<details>
+<summary>macOS / Linux</summary>
 
 ```bash
 export GROQ_API_KEY=gsk_xxxxxxxxxxxx
 
-# Add to ~/.zshrc to make it permanent
-echo 'export GROQ_API_KEY=gsk_xxxxxxxxxxxx' >> ~/.zshrc
+# Make permanent:
+echo 'export GROQ_API_KEY=gsk_xxxxxxxxxxxx' >> ~/.zshrc   # zsh
+echo 'export GROQ_API_KEY=gsk_xxxxxxxxxxxx' >> ~/.bashrc  # bash
 ```
+
+</details>
+
+<details>
+<summary>Windows — PowerShell</summary>
+
+```powershell
+$env:GROQ_API_KEY="gsk_xxxxxxxxxxxx"
+
+# Make permanent (user-level):
+[System.Environment]::SetEnvironmentVariable('GROQ_API_KEY', 'gsk_xxxxxxxxxxxx', 'User')
+```
+
+</details>
+
+<details>
+<summary>Windows — CMD</summary>
+
+```cmd
+set GROQ_API_KEY=gsk_xxxxxxxxxxxx
+
+:: Make permanent:
+setx GROQ_API_KEY gsk_xxxxxxxxxxxx
+```
+
+</details>
 
 4. Run:
 
@@ -106,6 +157,8 @@ codebrief --ai
 | Ollama     | `--provider ollama`    | *(none)*            | Free/local | `llama3.3`                |
 
 **Groq and Gemini are both free** — no credit card required. Groq is fastest (~2–3s), Gemini offers Google's latest models.
+
+> **Setting keys:** Use any method from the [Setup](#setup-30-seconds-free) section above — `.env.local`, `~/.codebrief`, or environment variables. All methods work for every provider.
 
 ### Browsing Available Models
 
